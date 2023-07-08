@@ -1,36 +1,37 @@
 {
   "name": "quote-toggle",
   "displayName": "Quote Toggle",
-  "description": "Toggle between single and double quotes in selected text",
+  "description": "Toggle between single and double quotes",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenng/vscode-quote-toggle.git"
+  },
   "engines": {
-    "vscode": "^1.80.0"
+    "vscode": "^1.70.0"
   },
   "categories": [
     "Other"
-  ],
-  "activationEvents": [
-    "onCommand:quote-toggle.helloWorld"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "quote-toggle.helloWorld",
-        "title": "Hello World"
+        "command": "quote-toggle.toggleQuote",
+        "title": "Toggle Quote"
       }
     ]
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run compile",
+    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "pretest": "pnpm run compile && pnpm run lint",
+    "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.80.0",
+    "@types/vscode": "^1.70.0",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "20.2.5",
